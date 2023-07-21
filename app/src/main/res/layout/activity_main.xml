@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#82CED8"
     tools:context=".MainActivity">
 
     <ImageView
@@ -17,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/baseline_currency_exchange_24" />
 
     <EditText
         android:id="@+id/tvEntrada"
@@ -25,52 +27,63 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="88dp"
+        android:hint="Importe"
         android:inputType="number"
-        android:text="TextView"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Spinner
         android:id="@+id/spinnerUno"
+        style="@style/spinnerStyle"
+        android:layout_width="203dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="36dp"
+        android:scrollbarSize="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/tvEntrada"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvEntrada"
-        style="@style/spinnerStyle" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvCambiarA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/tvEntrada"
+        android:layout_width="141dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="124dp"
+        android:gravity="center"
+        android:text="@string/cambiar_a"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEntrada" />
 
     <Spinner
         android:id="@+id/spinnerDos"
         style="@style/spinnerStyle"
-        android:layout_marginEnd="16dp"
+        android:layout_width="199dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="36dp"
         app:layout_constraintBottom_toBottomOf="@+id/tvCambiarA"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvCambiarA" />
+        app:layout_constraintTop_toTopOf="@+id/tvCambiarA"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonConvert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="189dp"
+        android:layout_height="49dp"
         android:layout_marginTop="96dp"
-        android:text="Button"
+        android:text="@string/convertir"
+        app:layout_constraintCircleRadius="0dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerDos" />
 
     <Button
         android:id="@+id/buttonReset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="193dp"
+        android:layout_height="51dp"
         android:layout_marginTop="96dp"
-        android:text="Button"
+        android:text="@string/resetear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -84,11 +97,12 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <TextView
-        android:id="@+id/tvMontoCambio"
+        android:id="@+id/tvResultado"
         android:layout_width="105dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="24dp"
-        android:text="TextView"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Resultado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

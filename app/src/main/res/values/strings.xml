@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">EjercicioDiecisiete</string>
+    <string name="resetear">Resetear</string>
+    <string name="textview">TextView</string>
+    <string name="convertir">Convertir</string>
+    <string name="cambiar_a">Cambiar A</string>
 </resources>
